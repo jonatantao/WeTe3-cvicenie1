@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
 
+enum MENU { OSOBY, KNIHY, VYPOZICKY}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,40 +9,23 @@ import {FormControl, FormGroup} from "@angular/forms";
 export class AppComponent {
   title = 'cvicenie1';
 
-  vstup = "qwe";
+  osoby: any = [];
+  osoba = {meno:"aaa", priezvisko:"bbb"};
 
-  cena = 0;
-  mnozstvo = 0;
-  vysledok = 0;
-  test = null;
+  zakaz = false;
 
-  form: FormGroup;
+  menu = MENU;
+  aktMenu: MENU = MENU.OSOBY;
 
-  constructor() {
-    this.form = new FormGroup( {
-      username: new FormControl(),
-      password: new FormControl()
-    })
+  otvorMenu(m: MENU){
+    this.aktMenu = m;
   }
 
-  public pracuj(){
-    alert("hurá!");
+  public pridaj(): void{
+    this.osoby.push(this.osoba)
   }
 
-  public ukazTo(){
-    alert("vstup" + this.vstup);
-  }
-
-  public spolu(){
-    this.vysledok = this.cena * this.mnozstvo;
-  }
-
-  public prihlas(): void{
-    alert("Pouzivatelske meno: "
-      + this.form.value.username);
-  }
-
-  public disabled(): void{
-    if ()
+  public test(): void{
+    this.zakaz = true;
   }
 }
