@@ -22,7 +22,7 @@ export class AppComponent {
   }
 
   public pridaj(): void{
-    this.osoby.push(this.osoba)
+    this.osoby.push({meno: this.osoba.meno, priezvisko: this.osoba.priezvisko});
   }
 
   public test(): void{
