@@ -1,0 +1,24 @@
+<div class="content" role="main">
+  abc: {{title}}
+  <button (click)="pracuj();">stlac ma</button>
+
+  <select (change)="pracuj();">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+  </select>
+  <input [(ngModel)]="vstup" (change)="ukazTo()">
+
+  cena za ks:<input [(ngModel)]="cena" (change)="spolu();"><br>
+  mnozstvo:<input [(ngModel)]="mnozstvo" (change)="spolu();"><br>
+  spolu:{{vysledok}}
+  <button [(ngModel)]="test" id="test" )]>
+
+</div>
+
+<form [formGroup]="form" ]>
+  pouzivatelske meno: <input formControlName="username">
+  heslo: <input formControlName="password">
+
+  <button (click)="prihlas()">PRIHLAS SA</button>
+</form>
