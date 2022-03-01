@@ -10,8 +10,6 @@ enum MENU { OSOBY, KNIHY, VYPOZICKY}
 export class AppComponent {
   title = 'cvicenia wete';
 
-  osoby: Osoba[] = []
-
   menu = MENU;
   aktMenu: MENU = MENU.OSOBY;
 
