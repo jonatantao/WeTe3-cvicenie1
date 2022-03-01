@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Osoba} from "./models/osoba.model";
 
 enum MENU { OSOBY, KNIHY, VYPOZICKY}
 @Component({
@@ -9,8 +10,8 @@ enum MENU { OSOBY, KNIHY, VYPOZICKY}
 export class AppComponent {
   title = 'cvicenie1';
 
-  osoby: any = [];
-  osoba = {meno:"aaa", priezvisko:"bbb"};
+  osoby: Osoba[] = []
+  osoba: Osoba = {meno:"aaa", priezvisko:"bbb"};
 
   zakaz = false;
 
