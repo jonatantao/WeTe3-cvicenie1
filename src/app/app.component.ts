@@ -25,7 +25,11 @@ export class AppComponent {
     this.osoby.push({meno: this.osoba.meno, priezvisko: this.osoba.priezvisko});
   }
 
-  public test(): void{
-    this.zakaz = true;
+  public test(): void {
+    if (!this.zakaz) {
+      this.zakaz = true;
+    } else {
+      this.zakaz = true;
+    }
   }
 }
