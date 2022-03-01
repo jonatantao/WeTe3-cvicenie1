@@ -6,6 +6,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { OsobaFormularComponent } from './osoba-formular/osoba-formular.component';
 import { OsobyZoznamComponent } from './osoby-zoznam/osoby-zoznam.component';
 import { OsobaStrankaComponent } from './osoba-stranka/osoba-stranka.component';
+import {RouterModule} from "@angular/router";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { OsobaStrankaComponent } from './osoba-stranka/osoba-stranka.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

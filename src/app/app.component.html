@@ -5,15 +5,5 @@
   <button (click)="otvorMenu(menu.KNIHY)">KNIHY</button>
   <button (click)="otvorMenu(menu.VYPOZICKY)">VYPOZICKY</button>
 
-  <div *ngIf="aktMenu == menu.OSOBY">
-    <app-osoba-stranka></app-osoba-stranka>
-  </div>
-
-  <div *ngIf="aktMenu == menu.KNIHY">
-    <h1>KNIHY</h1>
-  </div>
-
-  <div *ngIf="aktMenu == menu.VYPOZICKY">
-    <h1>VYPOZICKY</h1>
-  </div>
+  <router-outlet></router-outlet>
 </div>
