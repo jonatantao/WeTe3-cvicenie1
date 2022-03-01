@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { OsobaFormularComponent } from './osoba-formular/osoba-formular.component';
 import { OsobyZoznamComponent } from './osoby-zoznam/osoby-zoznam.component';
+import { OsobaStrankaComponent } from './osoba-stranka/osoba-stranka.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OsobaFormularComponent,
-    OsobyZoznamComponent
+    OsobyZoznamComponent,
+    OsobaStrankaComponent
   ],
   imports: [
     BrowserModule,

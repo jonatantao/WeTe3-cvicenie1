@@ -6,10 +6,7 @@
   <button (click)="otvorMenu(menu.VYPOZICKY)">VYPOZICKY</button>
 
   <div *ngIf="aktMenu == menu.OSOBY">
-
-    <app-osoba-formular></app-osoba-formular>
-
-    <app-osoby-zoznam></app-osoby-zoznam>
+    <app-osoba-stranka></app-osoba-stranka>
   </div>
 
   <div *ngIf="aktMenu == menu.KNIHY">

@@ -13,6 +13,9 @@ export class AppComponent {
   menu = MENU;
   aktMenu: MENU = MENU.OSOBY;
 
+  constructor() {
+  }
+
   otvorMenu(m: MENU) {
     this.aktMenu = m;
   }
