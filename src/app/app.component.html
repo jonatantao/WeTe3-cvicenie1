@@ -6,14 +6,8 @@
   <button (click)="otvorMenu(menu.VYPOZICKY)">VYPOZICKY</button>
 
   <div *ngIf="aktMenu == menu.OSOBY">
-    <h1>OSOBY</h1>
-    meno:
-    <input [(ngModel)]="osoba.meno" [disabled]="zakaz"><br>
-    priezvisko:
-    <input [ngModel]="osoba.priezvisko" [disabled]="zakaz"><br>
 
-    <button (click)="test()">TEST</button><br>
-    <button (click)="pridaj()">PRIDAJ</button>
+    <app-osoba-formular></app-osoba-formular>
 
     <div *ngFor="let o of osoby">
       {{o.meno}} {{o.priezvisko}}

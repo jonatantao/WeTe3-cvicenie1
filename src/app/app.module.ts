@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { OsobaFormularComponent } from './osoba-formular/osoba-formular.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OsobaFormularComponent
   ],
   imports: [
     BrowserModule,
