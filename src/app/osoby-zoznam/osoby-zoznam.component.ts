@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Osoba} from "../models/osoba.model";
 
 @Component({
@@ -9,7 +9,23 @@ import {Osoba} from "../models/osoba.model";
 export class OsobyZoznamComponent{
 
   @Input()
-  osoby: Osoba[] = []
+  osoby: Osoba[] = [];
+
+  @Output()
+  upravOsobu: EventEmitter<Osoba> = new EventEmitter<Osoba>();
+
+  @Output()
+  zmazOsobu: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
+
+  uprav(osoba: Osoba): void{
+    this.upravOsobu.emit(osoba);
+  }
+
+  zmaz(osobaId: string | undefined): void{
+    if (osobaId){
+      this.zmazOsobu.emit(osobaId);
+    }
+  }
 }
