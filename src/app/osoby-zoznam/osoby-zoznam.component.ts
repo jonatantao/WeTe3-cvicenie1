@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Osoba} from "../models/osoba.model";
 
 @Component({
@@ -8,9 +8,8 @@ import {Osoba} from "../models/osoba.model";
 })
 export class OsobyZoznamComponent{
 
+  @Input()
   osoby: Osoba[] = []
 
   constructor() { }
-
-
 }
